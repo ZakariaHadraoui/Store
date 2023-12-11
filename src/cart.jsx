@@ -7,7 +7,7 @@ function Cart({ cart, setcart }) {
   function handlePrice() {
     let ans = 0;
     cart.forEach((ele) => {
-      ans += ele.price * (quantity[ele.id] || 0);
+      ans += ele.price * (quantity[ele.id] || 1);
     });
     setPrice(ans.toFixed(2));
   }
@@ -61,7 +61,7 @@ function Cart({ cart, setcart }) {
                   >
                     -
                   </button>
-                  <span>{quantity[ele.id] || 0}</span>
+                  <span>{quantity[ele.id] || 1}</span>
                   <button
                     className='btn btn2 btn-secondary mx-2'
                     onClick={() => addToCart(ele.id)}

@@ -4,7 +4,8 @@ import { ShoppingCart } from 'phosphor-react'
 
 function Navbar({ setshow, show, cart }) {
   return (
-    <header>
+    <header className=' head container-fluid'>
+      
       <ul>
         <button className='btn1' style={{ border: 'none' }} onClick={() => setshow(true)}> <Link to={'/'} className='link'>Shop</Link></button>
 

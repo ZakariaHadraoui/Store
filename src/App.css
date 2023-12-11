@@ -2,7 +2,11 @@ body {
   font-family: 'arial';
   background-color: #39A7FF;
   width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+
 }
+
 
 * {
   margin: 0;
@@ -24,7 +28,7 @@ h1 {
   color: #000000;
   text-align: center;
   margin-bottom: 20px;
-  margin-top: 20px;
+  margin-top: 100px;
   font-weight: 700;
 }
 
@@ -52,23 +56,24 @@ ul {
 
 .product {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  width: 20%;
-  height: 380px;
   margin: 8px;
   background-color: white;
   border-radius: 30px;
+  padding: 20px;
+  margin-top: 30px;
 }
 
 button {
   font-weight: bold;
   position: relative;
-  padding: 10px 20px;
+  padding: 10px 15px;
   border-radius: 7px;
   border: 3px solid #39A7FF;
   font-size: 14px;
   text-transform: uppercase;
   font-weight: 600;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
   background: transparent;
   color: #000000;
   overflow: hidden;
@@ -77,6 +82,23 @@ button {
   -moz-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
+
+.head {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 9999;
+  right: 0;
+}
+
+.head ul {
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media screen and (max-width:700px) {}
 
 button:hover {
   color: white;
@@ -162,5 +184,21 @@ button:active {
     background-color: #39A7FF;
     box-shadow: none;
     transform: scale(1.1);
+  }
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.btns button {
+  display: block;
+  color: #111011;
+
+  &:hover {
+    background-color: #f0F0F0;
   }
 }
